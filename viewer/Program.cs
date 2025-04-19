@@ -3,6 +3,7 @@ using viewer.Hubs;
 using Microsoft.Extensions.DependencyInjection;
 using Azure.Messaging.ServiceBus;
 using Azure.Identity;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -31,6 +35,12 @@ app.UseEndpoints(endpoints =>
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
 });
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.Run();
 

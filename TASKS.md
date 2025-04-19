@@ -23,32 +23,32 @@ These mini-demos target your weakest areas:
 ## ✅ PART 2: Service Bus + Console Sender
 **Goal:** Send messages using Managed Identity
 
-- [ ] Assign **System-Assigned Managed Identity** to console app or Function App
-- [ ] Give the identity `Azure Service Bus Data Sender` on the queue
-- [ ] Use `DefaultAzureCredential` to send a message to the queue
-- [ ] Confirm it lands in the queue
+- [x] Assign **System-Assigned Managed Identity** to console app or Function App
+- [x] Give the identity `Azure Service Bus Data Sender` on the queue
+- [x] Use `DefaultAzureCredential` to send a message to the queue
+- [x] Confirm it lands in the queue
 
 ---
 
 ## ✅ PART 3: Function App with Service Bus Trigger
 **Goal:** Read queue messages and output to Blob Storage
 
-- [ ] Create a Function App with a **Service Bus trigger**
-- [ ] Add an **output binding to Blob Storage**
-- [ ] Use a managed identity to authenticate (no connection strings)
-- [ ] Test end-to-end: send → process → store blob
+- [x] Create a Function App with a **Service Bus trigger**
+- [x] Add an **output binding to Blob Storage**
+- [x] Use a managed identity to authenticate (no connection strings)
+- [x] Test end-to-end: send → process → store blob
 
 ---
 
 ## ✅ PART 4: Application Insights in Action
 **Goal:** Monitor real-time logs and dependencies
 
-- [ ] Enable **Application Insights** on your Function App or console app
-- [ ] Add `ILogger` or `TelemetryClient.TrackEvent()` calls
-- [ ] View:
-  - [ ] **Live Metrics Stream**
-  - [ ] **Traces and logs**
-  - [ ] **Failures/Dependencies** (if using HttpClient or similar)
+- [x] Enable **Application Insights** on your Function App or console app
+- [x] Add `ILogger` or `TelemetryClient.TrackEvent()` calls
+- [x] View:
+  - [x] **Live Metrics Stream**
+  - [x] **Traces and logs**
+  - [x] **Failures/Dependencies** (if using HttpClient or similar)
 
 ---
 
